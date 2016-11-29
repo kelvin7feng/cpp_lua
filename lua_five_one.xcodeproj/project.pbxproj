@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B628D54D1DEC100200D4C87C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B628D54C1DEC100200D4C87C /* main.cpp */; };
+		B628D5591DEC2A9F00D4C87C /* lua_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B628D5571DEC2A9F00D4C87C /* lua_engine.cpp */; };
+		B628D5601DEC2FE100D4C87C /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B628D55D1DEC2FE100D4C87C /* player.cpp */; };
+		B628D56F1DED329100D4C87C /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B628D56E1DED329100D4C87C /* liblua.a */; };
+		B628D5711DED382C00D4C87C /* libtolua++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B628D5701DED382C00D4C87C /* libtolua++.a */; };
+		B628D5761DED398A00D4C87C /* lua_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B628D5751DED398A00D4C87C /* lua_player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,14 @@
 /* Begin PBXFileReference section */
 		B628D5491DEC100200D4C87C /* lua_five_one */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lua_five_one; sourceTree = BUILT_PRODUCTS_DIR; };
 		B628D54C1DEC100200D4C87C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B628D5571DEC2A9F00D4C87C /* lua_engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lua_engine.cpp; path = vm/lua_engine.cpp; sourceTree = "<group>"; };
+		B628D5581DEC2A9F00D4C87C /* lua_engine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lua_engine.hpp; path = vm/lua_engine.hpp; sourceTree = "<group>"; };
+		B628D55D1DEC2FE100D4C87C /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = player.cpp; path = class/player.cpp; sourceTree = "<group>"; };
+		B628D55E1DEC2FE100D4C87C /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player.h; path = class/player.h; sourceTree = "<group>"; };
+		B628D56E1DED329100D4C87C /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = "lua-5.1.5/src/liblua.a"; sourceTree = "<group>"; };
+		B628D5701DED382C00D4C87C /* libtolua++.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtolua++.a"; path = "tolua++/libtolua++.a"; sourceTree = "<group>"; };
+		B628D5741DED390700D4C87C /* lua_player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua_player.h; path = class/lua_player.h; sourceTree = "<group>"; };
+		B628D5751DED398A00D4C87C /* lua_player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lua_player.cpp; path = class/lua_player.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B628D5711DED382C00D4C87C /* libtolua++.a in Frameworks */,
+				B628D56F1DED329100D4C87C /* liblua.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,9 @@
 		B628D5401DEC100200D4C87C = {
 			isa = PBXGroup;
 			children = (
+				B628D5771DED7AC200D4C87C /* lib */,
+				B628D55B1DEC2FCE00D4C87C /* class */,
+				B628D55A1DEC2AA800D4C87C /* vm */,
 				B628D54B1DEC100200D4C87C /* lua_five_one */,
 				B628D54A1DEC100200D4C87C /* Products */,
 			);
@@ -60,6 +78,35 @@
 				B628D54C1DEC100200D4C87C /* main.cpp */,
 			);
 			path = lua_five_one;
+			sourceTree = "<group>";
+		};
+		B628D55A1DEC2AA800D4C87C /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				B628D5571DEC2A9F00D4C87C /* lua_engine.cpp */,
+				B628D5581DEC2A9F00D4C87C /* lua_engine.hpp */,
+			);
+			name = vm;
+			sourceTree = "<group>";
+		};
+		B628D55B1DEC2FCE00D4C87C /* class */ = {
+			isa = PBXGroup;
+			children = (
+				B628D5751DED398A00D4C87C /* lua_player.cpp */,
+				B628D5741DED390700D4C87C /* lua_player.h */,
+				B628D55D1DEC2FE100D4C87C /* player.cpp */,
+				B628D55E1DEC2FE100D4C87C /* player.h */,
+			);
+			name = class;
+			sourceTree = "<group>";
+		};
+		B628D5771DED7AC200D4C87C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B628D5701DED382C00D4C87C /* libtolua++.a */,
+				B628D56E1DED329100D4C87C /* liblua.a */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B628D5601DEC2FE100D4C87C /* player.cpp in Sources */,
+				B628D5761DED398A00D4C87C /* lua_player.cpp in Sources */,
+				B628D5591DEC2A9F00D4C87C /* lua_engine.cpp in Sources */,
 				B628D54D1DEC100200D4C87C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +259,13 @@
 		B628D5511DEC100200D4C87C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lua-5.1.5/src/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lua-5.1.5/src",
+					"$(PROJECT_DIR)/tolua++",
+					"$(PROJECT_DIR)/toluapp-master/src/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +273,13 @@
 		B628D5521DEC100200D4C87C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lua-5.1.5/src/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lua-5.1.5/src",
+					"$(PROJECT_DIR)/tolua++",
+					"$(PROJECT_DIR)/toluapp-master/src/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
