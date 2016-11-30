@@ -259,12 +259,10 @@
 		B628D5511DEC100200D4C87C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lua-5.1.5/src/";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/third_party/lua-5.1.5/src/";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/lua-5.1.5/src",
-					"$(PROJECT_DIR)/tolua++",
-					"$(PROJECT_DIR)/toluapp-master/src/lib",
+					"$(PROJECT_DIR)/third_party/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -273,12 +271,10 @@
 		B628D5521DEC100200D4C87C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/lua-5.1.5/src/";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/third_party/lua-5.1.5/src/";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/lua-5.1.5/src",
-					"$(PROJECT_DIR)/tolua++",
-					"$(PROJECT_DIR)/toluapp-master/src/lib",
+					"$(PROJECT_DIR)/third_party/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -303,6 +299,7 @@
 				B628D5521DEC100200D4C87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
