@@ -6,7 +6,6 @@
 //  Copyright © 2016年 kelvin. All rights reserved.
 //
 
-#include "lua_player.h"
 #include "lua_engine.hpp"
 #include "map"
 
@@ -112,7 +111,6 @@ int LuaEngine::InitState(int server_type)
         exit(1);
     }
     
-    tolua_player_open(m_lua_state);
     string szScriptPath = server_path[server_type];
     int nStatus = luaL_dofile(m_lua_state, szScriptPath.c_str());
     
