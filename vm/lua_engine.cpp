@@ -5,7 +5,7 @@
 //  Created by 冯文斌 on 16/11/28.
 //  Copyright © 2016年 kelvin. All rights reserved.
 //
-
+#include <stdlib.h>
 #include "lua_engine.hpp"
 #include "map"
 
@@ -13,8 +13,8 @@ using namespace std;
 
 LuaEngine::LuaEngine()
 {
-    server_path[SERVER_TYPE::LOGIC] = "./../script/logic_main.lua";
-    server_path[SERVER_TYPE::LOGIN] = "./../script/login_main.lua";
+    server_path[LOGIC] = "./../script/logic_main.lua";
+    server_path[LOGIN] = "./../script/login_main.lua";
 }
 
 LuaEngine::~LuaEngine()

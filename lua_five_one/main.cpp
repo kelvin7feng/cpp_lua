@@ -13,6 +13,6 @@ using namespace std;
 int main()
 {
     LuaEngine lua_engine;
-    lua_engine.InitState(LuaEngine::SERVER_TYPE::LOGIC);
+    lua_engine.InitState(1);
     return 0;  
 }
